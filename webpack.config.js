@@ -2,8 +2,10 @@ module.exports = {
   entry:  __dirname + "/src/index.js",
   output: {
     path: __dirname + "/src",
-    filename: "bundle.js"
+    filename: "bundle.js",
+    publicPath: "/assets/",
   },
+
   module: {
     loaders: [
       {
@@ -15,5 +17,12 @@ module.exports = {
         }
       }
     ]
+  },
+
+  devServer: {
+    contentBase: "./src",
+    colors: true,
+    historyApiFallback: true,
+    inline: true
   }
 };

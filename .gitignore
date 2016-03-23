@@ -9,3 +9,7 @@ Thumbs.db
 
 # Dependency directories
 node_modules
+
+# IntelliJ IDEA directories / Files
+.idea
+

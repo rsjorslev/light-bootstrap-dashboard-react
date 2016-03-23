@@ -4,6 +4,7 @@
   "description": "A React.js based version of Light Bootstrap Dashboard by creative-tim.com",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rasmus Sjoerslev",
