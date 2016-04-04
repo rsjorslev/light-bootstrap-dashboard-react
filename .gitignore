@@ -13,3 +13,5 @@ node_modules
 # IntelliJ IDEA directories / Files
 .idea
 
+# dist target folder
+dist
