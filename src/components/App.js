@@ -1,6 +1,7 @@
 var React = require('react');
+var myImage = require('../images/sidebar-5.jpg');
 
-import { Nav, Navbar, NavItem, NavDropdown, MenuItem, CollapsibleNav, DropdownButton } from 'react-bootstrap'
+import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 
 var App = React.createClass({
 
@@ -20,10 +21,14 @@ var App = React.createClass({
 
   render: function() {
 
+      var divStyle = {
+          backgroundImage: 'url(' + myImage + ')'
+      };
+
     return (
       <div>
           <div className="wrapper">
-              <div className="sidebar" data-color="orange">
+              <div className="sidebar" data-color="orange" data-image="#">
                   <div className="sidebar-wrapper">
                       <div className="logo">
                           <a href="http://www.creative-tim.com" className="simple-text">
@@ -76,6 +81,7 @@ var App = React.createClass({
                           </li>
                       </ul>
                   </div>
+                  <div className="sidebar-background" style={divStyle}></div>
               </div>
 
               <div className="main-panel">
@@ -113,6 +119,7 @@ var App = React.createClass({
                                           <p className="category">Here is a subtitle for this table</p>
                                       </div>
                                       <div className="content">
+                                          Checking font-awesome: (fa-globe)<br/>
                                           <i className="fa fa-globe fa-5x"></i>
                                       </div>
                                   </div>
@@ -135,7 +142,7 @@ var App = React.createClass({
                                           <p className="category">Here is a subtitle for this table</p>
                                       </div>
                                       <div className="content">
-                                          place some content here
+                                          <img src={myImage} />
                                       </div>
                                   </div>
                               </div>

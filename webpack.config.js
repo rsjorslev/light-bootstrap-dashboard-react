@@ -3,14 +3,14 @@ var webpack = require('webpack');
 var ExtractTextPlugin= require('extract-text-webpack-plugin');
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   entry:  __dirname + "/src/index.js",
   output: {
     path: __dirname + "/src",
     filename: "bundle.js",
     publicPath: "/assets/"
   },
-
+    
   module: {
     loaders: [
         {
@@ -21,11 +21,11 @@ module.exports = {
         {
             //postcss is not being used anymore after i used an offline version of Roboto font. kept as a reference
             test: /\.scss$/,
-            loader: 'style!css!postcss!sass'
+            loader: 'style!css!sass'
         },
         {
             test: /\.(png|jpg)$/,
-            loader: 'url-loader!?limit=8192'
+            loader: 'url-loader?limit=8192'
         },
         /**
          *  TODO:
