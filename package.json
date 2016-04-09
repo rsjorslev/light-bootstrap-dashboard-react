@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress",
-    "start": "NODE_ENV=development webpack-dev-server --config ./webpack.config.js --progress"
+    "start": "NODE_ENV=development webpack-dev-server --config ./webpack.config.js --progress --port 3000"
   },
   "author": "Rasmus Sjoerslev",
   "license": "MIT",
@@ -35,10 +35,13 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "classnames": "^2.2.3",
     "font-awesome": "^4.5.0",
     "pixeden-stroke-7-icon": "^1.2.3",
     "react": "^0.14.7",
     "react-bootstrap": "^0.28.4",
-    "react-dom": "^0.14.7"
+    "react-chartist": "^0.10.1",
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.1"
   }
 }

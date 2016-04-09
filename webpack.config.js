@@ -85,6 +85,18 @@ dont think i need this for the WDS - only relevant for production/dist?
     colors: true,
     historyApiFallback: true,
     inline: true,
-    hot: true
+    hot: true,
+      proxy: {
+          '/api*': {
+              target: 'http://localhost:8080',
+              secure: false
+          },
+          '/user*': {
+              auth: 'rs:pass',
+              target: 'http://localhost:8080',
+              secure: false
+          }
+      }
+
   }
 };
