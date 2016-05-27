@@ -10,7 +10,8 @@ class CardContent extends React.Component {
         const contentClass = classnames({
             'content': true,
             'table-responsive': this.props.table,
-            'table-full-width': this.props.table
+            'table-full-width': this.props.table,
+            'all-icons': this.props.icons
         });
 
         return (

@@ -19,18 +19,18 @@ class Dashboard extends React.Component {
             <div>
                 <div className="col-md-4">
                     <Card>
-                        <CardHeader title="Email Statistics" subTitle="Last Campaign Performance"/>
+                        <CardHeader title="Approval Statistics" subTitle="Chart of the approval states"/>
                         <CardContent>
                             <ChartistGraph data={helpers.pieChartData} type={'Pie'} />
                         <CardFooter>
                             <CardFooterLegend>
-                                <i className="fa fa-circle text-info" /> Open
-                                <i className="fa fa-circle text-danger" /> Bounce
-                                <i className="fa fa-circle text-warning" /> Unsubscribe
+                                <i className="fa fa-circle text-info" /> Pending
+                                <i className="fa fa-circle text-danger" /> Approved
+                                <i className="fa fa-circle text-warning" /> Denied
                             </CardFooterLegend>
                             <hr/>
                             <CardFooterStats>
-                                <i className="fa fa-clock-o" /> Campaign sent 2 days ago
+                                <i className="fa fa-clock-o" /> Last updated 34 min ago
                             </CardFooterStats>
                         </CardFooter>
                         </CardContent>
@@ -44,9 +44,9 @@ class Dashboard extends React.Component {
                             <ChartistGraph data={helpers.dataSale} options={helpers.optionsSales} responsive-options={helpers.responsiveOptions} type={'Line'} />
                         <CardFooter>
                             <CardFooterLegend>
-                                <i className="fa fa-circle text-info" /> Open
-                                <i className="fa fa-circle text-danger" /> Bounce
-                                <i className="fa fa-circle text-warning" /> Unsubscribe
+                                <i className="fa fa-circle text-info" /> Mobile
+                                <i className="fa fa-circle text-danger" /> Desktop
+                                <i className="fa fa-circle text-warning" /> Unknown
                             </CardFooterLegend>
                             <hr/>
                             <CardFooterStats>
@@ -57,25 +57,6 @@ class Dashboard extends React.Component {
                     </Card>
                 </div>
 
-                <div className="col-md-6">
-                    <Card>
-                        <CardHeader title="2014 Sales" subTitle="All products including taxes"/>
-                        <CardContent>
-                            <ChartistGraph data={helpers.dataCars} options={helpers.options} type={'Bar'} />
-                        <CardFooter>
-                            <CardFooterLegend>
-                                <i className="fa fa-circle text-info" /> Open
-                                <i className="fa fa-circle text-danger" /> Bounce
-                                <i className="fa fa-circle text-warning" /> Unsubscribe
-                            </CardFooterLegend>
-                            <hr/>
-                            <CardFooterStats>
-                                <i className="fa fa-clock-o" /> Campaign sent 2 days ago
-                            </CardFooterStats>
-                        </CardFooter>
-                        </CardContent>
-                    </Card>
-                </div>
             </div>
         );
     }

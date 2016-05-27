@@ -8,7 +8,7 @@ var App = React.createClass({
 
     return (
           <div className="wrapper">
-              <Sidebar bgcolor="purple" title="admin dash"/>
+              <Sidebar bgcolor="purple" title="vIDM Approval"/>
               <div className="main-panel">
                   <NavTop rout={this.props.routes}/>
 

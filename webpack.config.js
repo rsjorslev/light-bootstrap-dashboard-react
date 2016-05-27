@@ -87,14 +87,21 @@ dont think i need this for the WDS - only relevant for production/dist?
     inline: true,
     hot: true,
       proxy: {
-          '/api*': {
-              target: 'http://localhost:8080',
+          '/approvals*': {
+              target: 'http://localhost:8081',
               secure: false
           },
           '/user*': {
               auth: 'rs:pass',
               target: 'http://localhost:8080',
               secure: false
+          },
+          '/api*': {
+              target: 'https://vidm2.psg.lan/SAAS/jersey/manager',
+              secure: false,
+              headers: {
+                  'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI0ZDFlOTJkZi1mZTMzLTRjYzQtOTBhMC1kM2NkNWE1NmMwZjEiLCJwcm4iOiJhcHByb3ZhbEBWSURNMiIsImRvbWFpbiI6IkxvY2FsIFVzZXJzIiwidXNlcl9pZCI6IjYiLCJhdXRoX3RpbWUiOjE0NjM1OTQ5NDEsImlzcyI6Imh0dHBzOi8vdmlkbTIucHNnLmxhbi9TQUFTL2F1dGgiLCJhdWQiOiJodHRwczovL3ZpZG0yLnBzZy5sYW4vU0FBUy9hdXRoL29hdXRodG9rZW4iLCJjdHgiOiJbe1wibXRkXCI6XCJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YWM6Y2xhc3NlczpQYXNzd29yZFByb3RlY3RlZFRyYW5zcG9ydFwiLFwiaWF0XCI6MTQ2MzU5NDk0MSxcImlkXCI6NH1dIiwic2NwIjoiYWRtaW4iLCJpZHAiOiIwIiwiZW1sIjoiT0F1dGhDbGllbnRfYXBwcm92YWxAbm9yZXBseS5jb20iLCJjaWQiOiJhcHByb3ZhbCIsImRpZCI6IiIsIndpZCI6IiIsImV4cCI6MTY1MjgxMDk0MSwiaWF0IjoxNDYzNTk0OTQxLCJzdWIiOiI2N2ZlZGViNy1lZDFjLTQ0OGUtYWUzYy1lY2RmYzhjN2I5YzQiLCJwcm5fdHlwZSI6IlNFUlZJQ0UifQ.lKtzC3TJjdO4N-N_-FPUzT-Ij9DDykvG04-Edsgp3tQWG5LRhu45xfKPbsmZHJaKY1LQeVQAb6B0mVBRLN4EsoDWh1DYjXuIKFx98Tib86PjFjjIV5QloIaVW8lX0JC29hlztnxoZbuoO6pQbAeSbTtMnUMrBeaBs9rpI8NNFEk'
+              }
           }
       }
 

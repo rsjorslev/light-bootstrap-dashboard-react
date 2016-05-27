@@ -4,6 +4,7 @@ class Notifications extends React.Component {
     render() {
         return (
             <div>i am Notifications</div>
+
         );
     }
 }
